@@ -8,16 +8,29 @@ Mysql on Container with utf-8 encoding.
 - make
 - mysql:5.7 image
 
+## Intro
+- `etc`: store mysql config file.
+- `data`: directory used to volume to mysql container to back up data.
+
 ## Usage
 - clone repo
 ```
 git clone https://github.com/dockerq/container-mysql.git
 ```
-- change root pass etc on Makefile
+- change your config info on `Makefile` and `etc/adolphlwq.cnf`
 ```
+# Makefile
 export root_pass=root
 export mysql_user=user
 export mysql_pass=pass
+
+# etc/adolphlwq.cnf
+[client]
+default-character-set=utf8
+[mysql]
+default-character-set=utf8
+[mysqld]
+character-set-server=utf8
 ```
 - run image
 ```
