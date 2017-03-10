@@ -14,42 +14,46 @@ Mysql on Container with utf-8 encoding.
 
 ## Usage
 - clone repo
-```
-git clone https://github.com/dockerq/container-mysql.git
-```
-- change your config info on `Makefile` and `etc/adolphlwq.cnf`
-```
-# Makefile
-export root_pass=root
-export mysql_user=user
-export mysql_pass=pass
 
-# etc/adolphlwq.cnf
-[client]
-default-character-set=utf8
-[mysql]
-default-character-set=utf8
-[mysqld]
-character-set-server=utf8
-```
+  ```
+  git clone https://github.com/dockerq/container-mysql.git
+  ```
+- change your config info on `Makefile` and `etc/adolphlwq.cnf`
+  ```
+  # Makefile
+  export root_pass=root
+  export mysql_user=user
+  export mysql_pass=pass
+
+  # etc/adolphlwq.cnf
+  [client]
+  default-character-set=utf8
+  [mysql]
+  default-character-set=utf8
+  [mysqld]
+  character-set-server=utf8
+  ```
 - run image
-```
-make prod
-```
+  ```
+  make prod
+  ```
 
 ## Confirm encoding
 - exec to container
-```
-docker exec -it mysql bash
-```
+
+  ```
+  docker exec -it mysql bash
+  ```
 - login to mysql
-```
-mysql -u root -p your_pass
-```
+
+  ```
+  mysql -u root -p your_pass
+  ```
 - encoding
-```
-show variables like 'character%';
-```
+
+  ```
+  show variables like 'character%';
+  ```
 and you will see:
 ```
 mysql> show variables like 'character%';
