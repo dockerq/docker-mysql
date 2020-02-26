@@ -1,24 +1,21 @@
-# Mysql on container
-
-Mysql on Container with utf-8 encoding.
+# MySQL on docker container
+>MySQL on Docker Container with utf-8 encoding.
 
 ## Requisites
 - docker
 - Linux
 - make
-- mysql:5.7 image
-
-## Intro
-- `etc`: store mysql config file.
-- `data`: directory used to volume to mysql container to back up data.
+- direction
+  - `etc`: store mysql config file.
+  - `data`: directory used to volume to mysql container to back up data.
 
 ## Usage
 - clone repo
 
   ```
-  git clone https://github.com/dockerq/container-mysql.git
+  git clone https://github.com/dockerq/docker-mysql.git
   ```
-- change your config info on `Makefile` and `etc/adolphlwq.cnf`
+- change your config in `Makefile` and `etc/adolphlwq.cnf`
   ```
   # Makefile
   export root_pass=root
