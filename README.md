@@ -30,9 +30,12 @@
   [mysqld]
   character-set-server=utf8
   ```
-- run image
+- run image. **Note: default mysql version is `5.7`, add mysqlv to make to change mysql version**
   ```
+  # default mysql version is 5.7
   make prod
+  # use customed version by add mysqlv=5.6.25 to make
+  make prod mysqlv=5.6.25
   ```
 
 ## Confirm encoding
